@@ -18,6 +18,7 @@ html,body {
   background-color:white;
   font-size: 1em;
   line-height: 1.4;
+  font-family: Arial, Helvetica, sans-serif;
   /*margin: 0 7rem; */
 }
 
@@ -72,7 +73,7 @@ html,body {
 .theme-texts{
   position: absolute;
   top:35%;
-  left: 22rem;
+  left: 25rem;
   text-align: center;
   color:#000;
   justify-content: center;
@@ -99,7 +100,7 @@ a {
 .section-title {
   justify-content: center;
   text-align: center;
-  margin: 3rem 0;
+  margin: 5rem 0 3rem;
 }
 
 .skills-column {
@@ -132,15 +133,48 @@ a {
 .textblockbot {
   background-color: #13bff8;
   color: aliceblue;
-  width: 350.4px;
   display: flex;
   justify-content: space-around;
   gap: 30px;
 }
 
+.containerimg {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #13bff8;
+}
+
+.containerimg:hover .overlay {
+  opacity: 0.8;
+}
+
+.texthover {
+  color: white;
+  display: flex;
+  position: relative;
+  bottom: 0;
+  justify-content: space-around;
+  align-self: flex-end;
+  gap: 30px;
+  -webkit-transform: translate(0, 140%);
+  -ms-transform: translate(0, 140%);
+  transform: translate(0, 140%);
+}
+
 .images-3col {
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 1rem;
   grid-template-columns: repeat(3, 1fr);
   margin: 0 14rem;
 }
@@ -150,10 +184,142 @@ a {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);; 
   margin: 0 14rem;
-  grid-gap: 50px;
+  grid-gap: 1rem;
 }
 
+.left-accordion-box {
+  width: 40%;
+  margin-left: 12rem;
+}
 
+.blue-table {
+  display: flex;
+}
+
+.white-table {
+  display: flex;
+  margin-top: 10px;
+}
+
+.blue-table-text {
+  padding: 10px 30px;
+  width: 85%;
+  display: flex;
+  align-items: center;
+  background-color: #13bff8;
+  color: white;
+  font-weight: bolder;
+  border: 1px solid rgb(203, 202, 202);
+}
+
+.blue-table-plus {
+  padding: 10px 20px;
+  background-color: #4ec6ef;
+  color: white;
+  font-weight: bolder;
+  border: 1px solid rgb(203, 202, 202);
+}
+
+.white-table-text {
+  padding: 10px 30px;
+  width: 85%;
+  display: flex;
+  align-items: center;
+  border: 1px solid rgb(203, 202, 202);
+}
+
+.white-table-plus {
+  padding: 10px 20px;
+  font-weight: bolder;
+  color: #999;
+  border: 1px solid rgb(203, 202, 202);
+}
+
+.middle-box{
+  display: flex;
+  border: 1px solid rgb(203, 202, 202);
+}
+
+.middle-box-text {
+  padding: 3px 10px;
+}
+
+.big-middle-img {
+  width: 50px;
+  height: 50px;
+  margin: 30px 20px;
+}
+.middle-img {
+  width: 50px;
+  height: 50px;
+  margin: 10px 20px;
+}
+
+.tab-on-top {
+  display: flex;
+}
+
+.tab1 {
+  padding: 10px 20px;
+  font-weight: bolder;
+  border: 1px solid rgb(203, 202, 202);
+}
+
+.tab23 {
+  padding: 10px 20px;
+  color: grey ;
+  background-color: #f2f2f2;
+  border: 1px solid rgb(203, 202, 202);
+}
+
+.right-tab-box {
+  width: 40%;
+  margin-right: 12rem;
+}
+
+.right-tab-box-body {
+  border: 1px solid rgb(203, 202, 202);
+}
+
+.right-tab-box-text {
+  display: flex;
+  padding: 3px 10px 0px;
+  gap: 1rem;
+  align-items: center;
+}
+
+.sponsorimg {
+  display: flex;
+  justify-content: space-around;
+  margin: 5rem 10rem;
+}
+
+.footer {
+  background-color: #18242c;
+  color: white;
+  padding: 3rem 10rem ;
+}
+
+.footer-text {
+  display: flex;
+  gap: 3rem;
+}
+
+.grid4col {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 3rem 0;
+}
+
+#input {
+  background-color: rgb(241, 81, 81);
+  color: white;
+  height: 30px;
+  width: 200px;
+  padding: 5px;
+
+}
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
