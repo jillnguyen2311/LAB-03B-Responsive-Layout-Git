@@ -11,39 +11,58 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
-/* Code start from here */ 
+/* Code start from here */
 
-html,body {
+html,
+body {
   color: #222;
-  background-color:white;
+  background-color: white;
   font-size: 1em;
   line-height: 1.4;
   font-family: Arial, Helvetica, sans-serif;
-  /*margin: 0 7rem; */
 }
 
-.navbar{
+.navbar {
   display: flex;
   justify-content: space-around;
   margin: 0 7rem;
-  padding:0 7rem;
+  padding: 0 7rem;
 
 }
 
-.logo{
+.logo {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
-.navicon{
+.hiddenlogo {
+  display: none;
+}
+
+.navicon {
   display: flex;
+}
+
+.naviconimg {
+  display: block;
+}
+
+.biggestimg {
+  width: 70rem;
+  height: 35rem;
 }
 
 .container {
   position: relative;
   text-align: center;
   color: white;
+  height: 5.7rem
+}
+
+.large-img-container {
+  position: relative;
+  text-align: center;
 }
 
 .leftboxtext {
@@ -58,33 +77,33 @@ html,body {
   right: 16px;
 }
 
-.left-centered{
+.left-centered {
   position: absolute;
-  top:50%;
+  top: 50%;
   left: 15rem;
 }
 
-.right-centered{
+.right-centered {
   position: absolute;
-  top:50%;
+  top: 50%;
   right: 15rem;
 }
 
-.theme-texts{
+.theme-texts {
   position: absolute;
-  top:35%;
+  top: 35%;
   left: 25rem;
   text-align: center;
-  color:#000;
+  color: #000;
   justify-content: center;
   width: fit-content;
 }
 
-.head-theme{
-  background-color: #e6e4e4;
+.head-theme {
+  background-color: #cac9c9;
 }
 
-.intro-text{
+.intro-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -115,7 +134,7 @@ a {
   justify-content: center;
 }
 
-.image-w-blocktext{
+.image-w-blocktext {
   position: relative;
 }
 
@@ -179,12 +198,18 @@ a {
   margin: 0 14rem;
 }
 
-.imagesof6grids{
+.imagesof6grids {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);; 
+  grid-template-rows: repeat(2, 1fr);
+  ;
   margin: 0 14rem;
   grid-gap: 1rem;
+}
+
+.tablesof2 {
+  display: flex;
+  gap: 3rem;
 }
 
 .left-accordion-box {
@@ -235,7 +260,7 @@ a {
   border: 1px solid rgb(203, 202, 202);
 }
 
-.middle-box{
+.middle-box {
   display: flex;
   border: 1px solid rgb(203, 202, 202);
 }
@@ -249,6 +274,7 @@ a {
   height: 50px;
   margin: 30px 20px;
 }
+
 .middle-img {
   width: 50px;
   height: 50px;
@@ -267,7 +293,7 @@ a {
 
 .tab23 {
   padding: 10px 20px;
-  color: grey ;
+  color: grey;
   background-color: #f2f2f2;
   border: 1px solid rgb(203, 202, 202);
 }
@@ -288,7 +314,7 @@ a {
   align-items: center;
 }
 
-.sponsorimg {
+.allsponsorimg {
   display: flex;
   justify-content: space-around;
   margin: 5rem 10rem;
@@ -297,7 +323,7 @@ a {
 .footer {
   background-color: #18242c;
   color: white;
-  padding: 3rem 10rem ;
+  padding: 3rem 10rem;
 }
 
 .footer-text {
@@ -318,8 +344,179 @@ a {
   height: 30px;
   width: 200px;
   padding: 5px;
-
 }
+
+#lastimg {
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+/*Responsive Media Screen*/
+
+/*Ipad and Tablet*/
+
+
+@media only screen and (max-width: 1180px) {
+
+  html,
+  body {
+    margin: 0 auto;
+  }
+
+  .logo>h1 {
+    position: relative;
+    left: 3rem;
+    margin: 0px 2rem;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 5rem 0 2rem;
+    padding: 0 1rem;
+    gap: 1rem;
+  }
+
+  .biggestimg {
+    width: 100vw;
+    height: 20rem;
+  }
+
+  .left-centered {
+    left: 3rem
+  }
+
+  .right-centered {
+    right: 3rem;
+  }
+
+  .skills-column {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin: 0 10rem;
+  }
+
+  .images-3col {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 10rem;
+  }
+
+  .imagesof6grids {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    ;
+    margin: 0 10rem;
+  }
+
+  .tablesof2 {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .left-accordion-box,
+  .right-tab-box {
+    width: 60%;
+    margin: 0 10rem;
+  }
+
+  .sponsorimg {
+    width: 5rem;
+  }
+
+  .grid4col {
+    display: grid;
+    grid-gap: 3rem;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 3rem 0;
+  }
+
+  #input {
+    background-color: rgb(241, 81, 81);
+    color: white;
+    height: 30px;
+    width: 150px;
+    padding: 5px;
+  }
+}
+
+
+
+/*Phone*/
+
+@media only screen and (max-width: 500px) {
+  .header {
+    display: none;
+    visibility: hidden;
+  }
+
+  .hiddenlogo {
+    display: block;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  html,
+  body {
+    margin: 0 auto;
+  }
+
+  .intro-text {
+    margin: 4rem;
+  }
+
+  .skills-column {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 0 4rem;
+  }
+
+  .images-3col,
+  .imagesof6grids {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 0 4rem;
+  }
+
+  .left-accordion-box,
+  .right-tab-box {
+    width: 100vw;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+
+  .footer {
+    padding: 3rem 4rem;
+  }
+
+  .footer-text {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .grid4col {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  #lastimg {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
@@ -369,16 +566,6 @@ video {
 }
 
 /*
- * Remove default fieldset styles.
- */
-
-fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
-/*
  * Allow only vertical resizing of textareas.
  */
 
@@ -394,14 +581,6 @@ textarea {
    Helper classes
    ========================================================================== */
 
-/*
- * Hide visually and from screen readers
- */
-
-.hidden,
-[hidden] {
-  display: none !important;
-}
 
 /*
  * Hide only visually, but have it available for screen readers:
@@ -446,10 +625,6 @@ textarea {
  * Hide visually and from screen readers, but maintain layout
  */
 
-.invisible {
-  visibility: hidden;
-}
-
 /*
  * Clearfix: contain floats
  *
@@ -478,14 +653,10 @@ textarea {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 500px) {
-  /* Style adjustments for viewports that meet the condition */
-}
-
 @media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */
 }
 
@@ -496,6 +667,7 @@ textarea {
    ========================================================================== */
 
 @media print {
+
   *,
   *::before,
   *::after {
@@ -563,4 +735,3 @@ textarea {
     page-break-after: avoid;
   }
 }
-
